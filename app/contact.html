@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang=en-GB>
+	  <head>
+			<meta charset=utf-8>
+			<meta http-equiv=X-UA-Compatible content="IE=edge">
+			<meta name=viewport content="width=device-width, initial-scale=1">
+			<link rel=canonical href="https://airhorner.com/">
+			<title>Offline App</title>
+			<link rel=manifest href="manifest.json">
+			<link rel=stylesheet href="styles/main.css">
+	  </head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Contact</h1>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="contact.html" class="nav__item--active">Contact</a>
+				<a href="cv.html">CV</a>
+			</nav>
+		</header>
+		<main>
+			<section class="post-content clearfix"> <h1>Contact Me</h1><p>You can contact me via <span data-icon="T" aria-hidden="true"></span><a href="http://twitter.com/bigandy" target="_blank">twitter</a>, mobile <a href="tel:07736063671">077 36063 671</a>, or <span data-icon="B" aria-hidden="true"></span><a href="mailto:andy@big-andy.co.uk">email</a></p> </section>
+		</main>
+	</div>
+	<script src="/scripts/jquery.min.js"></script>
+	<script src="/scripts/main.min.js"></script>
+	<script>
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', { scope: '/' })
+				.then(function(registration) {
+					console.log('Service Worker Registered');
+				});
+
+			navigator.serviceWorker.ready.then(function(registration) {
+				console.log('Service Worker Ready');
+			});
+		}
+	</script>
+</body>
+</html>

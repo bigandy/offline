@@ -1,0 +1,14 @@
+body {
+    margin: 100px auto;
+    width: 75%;
+    background-color: #2196F3;
+}
+
+.list--plain {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav__item--active {
+    color: white;
+}

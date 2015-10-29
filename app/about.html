@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang=en-GB>
+	  <head>
+			<meta charset=utf-8>
+			<meta http-equiv=X-UA-Compatible content="IE=edge">
+			<meta name=viewport content="width=device-width, initial-scale=1">
+			<link rel=canonical href="https://airhorner.com/">
+			<title>Offline App</title>
+			<link rel=manifest href="manifest.json">
+			<link rel=stylesheet href="styles/main.css">
+	  </head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>About</h1>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="about.html" class="nav__item--active">About</a>
+				<a href="contact.html">Contact</a>
+				<a href="cv.html">CV</a>
+			</nav>
+		</header>
+		<main>
+			<section class="post-content clearfix"> <div class="row"><div class="large-12 columns"><h1 class="h2">About Me</h1><p>I’m a front-end and WordPress developer based in&nbsp;Oxford, UK working for&nbsp;<a href="http://www.electricstudio.co.uk">Electric Studio</a>. Outside of work I love cycling, photography, and listening to music. I’m husband of Marion and father of Arthur.</p><p>I specialise in WordPress theme and plugin development I love working with HTML5, CSS3, PHP and JavaScript. I relish optimising code and development processes with tools and standards.</p></div><div class="large-12 columns"><h2 class="h3">Links</h2><ul class="list-plain"><li><a href="http://twitter.com/bigandy">@bigandy</a></li><li><a href="http://github.com/bigandy">github.com/bigandy</a></li><li><a href="/feed">Feed – RSS</a></li><li><a href="https://big-andy.co.uk/wp-json/wp/v2/posts">Feed – JSON</a></li></ul><h2 class="h3">Colophon</h2><p>This site is powered by WordPress on <a href="http://wiki.nginx.org/Main">Nginx</a>. I have secured everything with ssl/tls and it utilises <a href="https://en.wikipedia.org/wiki/HTTP/2">http/2</a> and it is <strong>https</strong>://big-andy.co.uk.</p><p>The theme is built on top of the Zurb Foundation 5 Grid. Code linting and concatenation and minification, autoprefixing, uncss, criticalcss, svg optimisation is all handled by <a href="http://gulpjs.com/">Gulp</a> and CSS is compiled by <a href="https://github.com/postcss/postcss">PostCSS</a>. </p><p>For the typography I am using Open Sans from Google Fonts via the <a href="https://google-webfonts-helper.herokuapp.com/fonts">Google Webfont Helper</a> (I can self-host giving a 100/100 pagespeed insights score)… combined with&nbsp;<a href="http://jaicab.com/localFont/">localFont</a>&nbsp;I can inline the font in base-64 format in&nbsp;<a href="https://big-andy.co.uk/content/themes/v4/build/css/font.css">font.css</a> and then cache in the browser’s localStorage.</p><p><a href="https://github.com/bigandy/big-andy.co.uk">All my code is on Github</a>.</p></div></div> </section>
+		</main>
+	</div>
+	<script src="/scripts/jquery.min.js"></script>
+	<script src="/scripts/main.min.js"></script>
+	<script>
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', { scope: '/' })
+				.then(function(registration) {
+					console.log('Service Worker Registered');
+				});
+
+			navigator.serviceWorker.ready.then(function(registration) {
+				console.log('Service Worker Ready');
+			});
+		}
+	</script>
+</body>
+</html>
