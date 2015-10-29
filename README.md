@@ -9,3 +9,4 @@ start a simple web server up is to use Python's SimpleHTTPServer.  Run the follo
 
 cd app && python -m SimpleHTTPServer 3000
 
+Initial code and idea from the [Airhorn Webapp](https://github.com/GoogleChrome/airhorn) by the Chrome Team.
