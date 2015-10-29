@@ -1,6 +1,6 @@
 # Offline
 
-It demonstrates simple offline usage combined WP-API and $.getJSON.
+It demonstrates simple offline usage with ServiceWorker combined WP-API and $.getJSON.
 
 ## Running
 
